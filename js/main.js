@@ -8,10 +8,7 @@ $(document).ready(function () {
     });
 
     $(document).mouseup(function(e) {
-      var container = $(".header_block_right_qr_big");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $(container).removeClass("active");
-      }
+      $(".header_block_right_qr_big").removeClass("active");
     });
 
     $(".modal_contacts_back").click(function() {
@@ -24,17 +21,42 @@ $(document).ready(function () {
 
     $(".unicorn_block_left_btns_qr").click(function() {
       if ($(window).width() < 1200) {
-        $(".modal_back").removeClass("active");
-        $(".modal_qr").removeClass("active");
+        $(".modal_back").addClass("active");
+        $(".modal_qr").addClass("active");
       } else {
         $(".unicorn_block_left_btns_qr_big").addClass("active");
         $(".unicorn_block_left_btns_qr").addClass("hide");
       }
-      
+    });
+
+    $(".footer_mobile_btns_qr").click(function() {
+      $(".modal_back").addClass("active");
+      $(".modal_qr").addClass("active");
+    });
+
+    $(".modal_back").click(function() {
+      $(this).removeClass("active");
+      $(".modal_qr").removeClass("active");
+    });
+
+    $(".modal_qr").click(function() {
+      $(this).removeClass("active");
+      $(".modal_back").removeClass("active");
+    });
+
+    $(".unicorn_block_left_btns_qr_big").click(function() {
+      if ($(window).width() > 1199) {
+        $(this).removeClass("active");
+        $(".unicorn_block_left_btns_qr").removeClass("hide");
+      }
     });
 
     $(".header_block_right_qr").click(function() {
-      $(".header_block_right_qr_big").addClass("active");
+      $(".header_block_right_qr_big").toggleClass("active");
+    });
+
+    $(".header_block_right_qr_big").click(function() {
+      $(this).toggleClass("active");
     });
 
     $(".time_block_form_open").click(function() {
@@ -43,6 +65,16 @@ $(document).ready(function () {
 
     $(".time_block_form_close").click(function() {
       $(".time_block_form").removeClass("active");
+    });
+
+    $(".footer_desktop_content_left_btns_qr").click(function() {
+      $(".footer_desktop_content_left_btns_qr").addClass("hide");
+      $(".footer_desktop_content_left_btns_qr_big").addClass("active");
+    });
+
+    $(".footer_desktop_content_left_btns_qr_big").click(function() {
+      $(".footer_desktop_content_left_btns_qr").removeClass("hide");
+      $(".footer_desktop_content_left_btns_qr_big").removeClass("active");
     });
 
     $(".under_footer_block_open").click(function() {
@@ -55,6 +87,7 @@ $(document).ready(function () {
 
     $('.idea_slider').slick({
         dots: true,
+        arrows: false,
         speed: 500,
         infinite: true,
         slidesToShow: 2,
