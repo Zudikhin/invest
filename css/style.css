@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/rf-tone");
+@import url("http://fonts.cdnfonts.com/css/rf-tone");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -173,7 +173,12 @@ input:focus {
 @media (min-width: 1200px) {
   .container {
     padding: 0px 120px;
-    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1680px) {
+  .container {
+    padding: 0px 240px;
     margin: 0 auto;
   }
 }
@@ -525,21 +530,27 @@ input:focus {
 }
 @media (min-width: 1440px) {
   .header_block_nav {
-    margin-left: 100px;
+    margin-left: 78px;
   }
 }
 @media (min-width: 1536px) {
-  .header_block_nav ul li {
-    margin-left: 60px;
+  .header_block_nav {
+    margin-left: 52px;
   }
-  .header_block_left_logo img {
-    width: auto;
+  .header_block_nav ul li {
+    margin-left: 50px;
   }
   .header_block_nav li {
     margin-left: 80px;
   }
 }
 @media (min-width: 1920px) {
+  .header_block_nav {
+    margin-left: 110px;
+  }
+  .header_block_left_logo img {
+    width: auto;
+  }
   .header_block_right_login {
     margin-left: 70px;
   }
@@ -1682,17 +1693,6 @@ input:focus {
   }
 }
 @media (min-width: 1536px) {
-  .fond_block_right {
-    width: 780px;
-  }
-  .fond_block_right h3 {
-    font-size: 48px;
-    line-height: 53px;
-  }
-  .fond_block_right p {
-    font-size: 24px;
-    line-height: 45px;
-  }
   .fond_statistics_item {
     padding: 52px 30px 28px 30px;
   }
@@ -1714,6 +1714,17 @@ input:focus {
     height: 200px;
     width: calc(50% - 10px);
     margin-top: 20px;
+  }
+  .fond_block_right {
+    width: 780px;
+  }
+  .fond_block_right h3 {
+    font-size: 48px;
+    line-height: 53px;
+  }
+  .fond_block_right p {
+    font-size: 24px;
+    line-height: 45px;
   }
   .fond_statistics {
     margin-top: 130px;
@@ -1894,8 +1905,8 @@ input:focus {
             align-items: center;
   }
   .venture_block_text {
-    min-width: 515px;
-    width: 515px;
+    min-width: 623px;
+    width: 623px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -2669,8 +2680,6 @@ input:focus {
           box-sizing: border-box;
   border: 1px solid #A6A6A6;
   opacity: 1;
-  display: flex;
-  margin-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
