@@ -357,7 +357,7 @@ input:focus {
     height: 80px;
   }
   .header_block_left_logo img {
-    width: 28px;
+    width: 29px;
   }
   .header_block_left_btn {
     display: none;
@@ -550,7 +550,7 @@ input:focus {
     margin-left: 60px;
   }
   .header_block_left_logo img {
-    width: 38px;
+    width: auto;
   }
   .header_block_nav li {
     margin-left: 80px;
@@ -590,14 +590,14 @@ input:focus {
           justify-content: space-between;
 }
 .header_block_nav_company_drop_line {
-  height: 174px;
+  height: 183px;
   width: 1px;
   min-width: 1px;
   background-color: #fff;
 }
 .header_block_nav_company_drop_left {
   position: relative;
-  width: 254px;
+  width: 265px;
 }
 .header_block_nav_company_drop_mid {
   position: relative;
@@ -605,9 +605,9 @@ input:focus {
 }
 .header_block_nav_company_drop_text {
   font-family: "RF Tone";
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
   color: #FFFFFF;
 }
 .header_block_nav_company_drop_time {
@@ -632,7 +632,10 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 18px;
-  margin-top: 15px;
+  margin-top: 20px;
+}
+.header_block_nav_company_drop_time_item:last-child {
+  margin-right: 0px;
 }
 .header_block_nav_company_drop_time_item img {
   margin-right: 7px;
@@ -640,9 +643,9 @@ input:focus {
 .header_block_nav_company_drop_time_item p {
   font-family: "RF Tone";
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
   color: #FFFFFF;
 }
 .header_block_nav_company_drop_tel {
@@ -682,7 +685,7 @@ input:focus {
           align-items: center;
 }
 .header_block_nav_company_drop_right_mails_item {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .header_block_nav_company_drop_right_mails_item:first-child {
   margin-top: 0px;
@@ -690,9 +693,9 @@ input:focus {
 .header_block_nav_company_drop_right_mails_item_text {
   font-family: "RF Tone";
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
   color: #FFFFFF;
 }
 .header_block_nav_company_drop_right_mails_item_link {
@@ -723,7 +726,7 @@ input:focus {
 }
 .header_block_nav_company_drop_right_mails_item_link p {
   font-family: "RF Tone";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
@@ -769,7 +772,7 @@ input:focus {
           box-sizing: border-box;
   padding: 155px 0px 92px 0px;
   background: url(../img/main/back_mob.png);
-  background-position: 0px 70px;
+  background-position: -8px 54px;
   background-size: 442px;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -830,7 +833,7 @@ input:focus {
   display: block;
 }
 .main_block h1 span {
-  background: linear-gradient(90.92deg, #A8BCDF 46.92%, #A1BFDD 62.42%, #4566DF 72.88%);
+  background: linear-gradient(111.95deg, #9EB6E2 -54.17%, #B2E2E4 5.54%, #A4BCE0 69.71%, #4561E0 95.46%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1347,7 +1350,7 @@ input:focus {
 }
 .fond_block_right a span {
   font-family: "RF Tone";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
@@ -2199,6 +2202,9 @@ input:focus {
 @media (min-width: 1200px) {
   .idea {
     margin-top: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-bottom: 43px;
   }
   .idea h2 {
     text-align: left;
@@ -2228,8 +2234,8 @@ input:focus {
     border-radius: 30px;
     padding: 30px;
     width: calc(33.3333333333% - 12.5px);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
@@ -2388,8 +2394,8 @@ input:focus {
   .idea_list_item:hover {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
   .idea_link {
     width: 217px;
@@ -2652,12 +2658,12 @@ input:focus {
 .unicorn_block_left_btns a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 200px;
+  width: 168px;
   border: 1px solid #A6A6A6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 52px;
+  height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2667,7 +2673,7 @@ input:focus {
   border-radius: 10px;
 }
 .unicorn_block_left_btns a img {
-  width: 102px;
+  width: 124px;
 }
 .unicorn_block_left_btns_qr {
   width: 52px;
@@ -2703,8 +2709,12 @@ input:focus {
   display: block;
 }
 @media (min-width: 1200px) {
-  .unicorn {
-    position: relative;
+  .unicorn_back {
+    display: block;
+    width: 1018px;
+    position: absolute;
+    right: -300px;
+    top: 0px;
   }
   .unicorn_block {
     -webkit-box-orient: horizontal;
@@ -2773,6 +2783,11 @@ input:focus {
     height: 660px;
   }
 }
+@media (min-width: 1440px) {
+  .unicorn_back {
+    right: -200px;
+  }
+}
 @media (min-width: 1536px) {
   .unicorn_block_left {
     min-width: 575px;
@@ -2786,7 +2801,16 @@ input:focus {
     margin-left: 150px;
   }
 }
+@media (min-width: 1680px) {
+  .unicorn_back {
+    right: -100px;
+  }
+}
 @media (min-width: 1920px) {
+  .unicorn_back {
+    width: auto;
+    right: 0px;
+  }
   .unicorn_block_left {
     min-width: 687px;
     width: 687px;
@@ -3351,7 +3375,7 @@ input:focus {
 }
 .news h2 {
   font-family: "RF Tone";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 28px;
   line-height: 60px;
   color: #FFFFFF;
@@ -3403,7 +3427,7 @@ input:focus {
 }
 .news_block_top_left_item h3 {
   font-family: "RF Tone";
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   line-height: 29px;
   color: #FFFFFF;
@@ -3505,7 +3529,7 @@ input:focus {
 }
 .news_block_bottom_item_wrap h3 {
   font-family: "RF Tone";
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 25px;
   color: #FFFFFF;
@@ -3564,7 +3588,7 @@ input:focus {
   text-align: center;
   line-height: 45px;
   font-family: "RF Tone";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 45px;
   text-align: center;
@@ -3579,7 +3603,11 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .news {
-    margin-top: 80px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 4;
+    padding-top: 80px;
+    background: #070613;
   }
   .news h2 {
     font-size: 40px;
@@ -4786,7 +4814,7 @@ input:focus {
 }
 .under_footer_block_open span {
   font-family: "RF Tone";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
@@ -4811,7 +4839,7 @@ input:focus {
 }
 .under_footer_block_hide span {
   font-family: "RF Tone";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
