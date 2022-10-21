@@ -1055,7 +1055,7 @@ input:focus {
   }
 }
 
-@-webkit-keyframes webkit-marqueeTopLead {
+@-webkit-keyframes marqueeTopLead {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1170,24 +1170,17 @@ input:focus {
   margin-top: 15px;
 }
 .leaders_row_item:nth-child(even) .leaders_row_item_wrap {
-  -webkit-animation-name: marqueeTopLead;
-  animation-name: marqueeTopLead;
-  -webkit-animation-duration: 52s;
-  animation-duration: 52s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+  -webkit-animation: marqueeTopLead 52s linear infinite;
+          animation: marqueeTopLead 52s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+
 }
 .leaders_row_item:nth-child(odd) .leaders_row_item_wrap {
-  -webkit-animation-name: marqueeBottomLead;
-  animation-name: marqueeBottomLead;
-  -webkit-animation-duration: 52s;
-  animation-duration: 52s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+  -webkit-animation: marqueeBottomLead 52s linear infinite;
+          animation: marqueeBottomLead 52s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
 .leaders_block {
   position: relative;
