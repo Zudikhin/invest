@@ -2248,12 +2248,11 @@ input:focus {
     border-radius: 30px;
     padding: 30px;
     width: calc(33.3333333333% - 12.5px);
-    -webkit-transition: -webkit-transform 0.2s linear;
-    transition: -webkit-transform 0.2s linear;
-    transition: transform 0.2s linear;
-    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   }
   .idea_list_item_top {
     display: -webkit-box;
@@ -2609,10 +2608,14 @@ input:focus {
 .unicorn_block_right_row_wrap_first {
   -webkit-animation: marqueeTop 42s linear infinite;
           animation: marqueeTop 42s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
 .unicorn_block_right_row_wrap_second {
   -webkit-animation: marqueeBottom 42s linear infinite;
           animation: marqueeBottom 42s linear infinite;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
 .unicorn_block_right_row img {
   width: 100%;
