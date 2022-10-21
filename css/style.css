@@ -920,7 +920,7 @@ input:focus {
   color: #FFFFFF;
   margin-top: 25px;
 }
-.main::after {
+/* .main::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -930,7 +930,7 @@ input:focus {
           filter: blur(150px);
   height: 200px;
   width: 100%;
-}
+} */
 @media (min-width: 576px) {
   .main {
     background: url(../img/main/back.png);
