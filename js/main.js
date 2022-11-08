@@ -99,7 +99,44 @@ $(document).ready(function () {
             }
           }
         ]
-      });
+    });
 
+    $(".faq_block_list_item_top").on("click", function(e) {
+      $(".faq_block_list_item_body").slideUp(400);
+      if($(this).parent().hasClass("active")) {
+        $(this).parent().removeClass("active");
+        $(".faq_block_list_item").removeClass("active");
+      } else {
+        $(this).next().slideToggle();
+        $(".faq_block_list_item").removeClass("active");
+        $(this).parent().addClass("active");
+        $(this).next().slideDown(400);
+      }
+    });
+
+    $(".vc_main").click(function() {
+      $(this).addClass("active");
+      $(".vc_review").removeClass("active");
+      $("#vc_main").addClass("active");
+      $("#vc_review").removeClass("active");
+    });
+
+    $(".vc_review").click(function() {
+      $(this).addClass("active");
+      $(".vc_main").removeClass("active");
+      $("#vc_main").removeClass("active");
+      $("#vc_review").addClass("active");
+    });
+
+    $(".vc_block_content_main_table").mCustomScrollbar({
+      axis:"x",
+      theme:"dark"
+    });
+
+    if ($(window).width() > 1200) {
+      $(".vc_block_content_review_bottom_item_wrap").mCustomScrollbar({
+        theme:"dark"
+      });
+    }
 
 });
