@@ -32,7 +32,7 @@
           </div>
           <nav class="header_block_nav">
             <ul>
-              <li class="header_block_nav_invest">
+              <li>
                 <a href="#">
                   Инвестиции
                 </a>
@@ -142,7 +142,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="active">
                 <a href="#">F.A.Q.</a>
               </li>
             </ul>
@@ -293,7 +293,7 @@
 
     <section class="time">
       <div class="time_img">
-        <img src="img/time/1.png" alt="">
+        <img src="animation_convert/1.png" alt="">
       </div>
       <div class="container">
         <div class="time_wrap">
@@ -726,6 +726,22 @@
       $('#invest').niceSelect();
       $('#individual').niceSelect();
       $('#purchase').niceSelect();
+    </script>
+
+    <script>
+
+      function changeImage() {
+        $(".time_img img").attr("src", "animation_convert/convert_2.gif");
+        setTimeout(function() { 
+          $(".time_img img").attr("src", "animation_convert/2.png");
+        }, 5000);
+      }
+
+      $(".time_block_form form button").click(function(e) {
+        e.preventDefault();
+        changeImage();
+      });
+
     </script>
 
 
