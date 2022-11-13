@@ -560,12 +560,12 @@ input:focus {
 }
 
 .header_block_nav_company_drop {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   top: 80px;
   width: 1200px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: rgba(7, 6, 19, 0.33);
   -webkit-backdrop-filter: blur(16.5px);
           backdrop-filter: blur(16.5px);
@@ -573,13 +573,19 @@ input:focus {
   padding: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: none;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
+  z-index: 13;
+}
+.header_block_nav_company_drop.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header_block_nav_company_drop_line {
   height: 183px;
@@ -2566,7 +2572,7 @@ input:focus {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin-left: 100px;
+    margin-left: 162px;
     position: relative;
     height: 660px;
   }
@@ -2574,19 +2580,6 @@ input:focus {
 @media (min-width: 1440px) {
   .unicorn_back {
     right: -200px;
-  }
-}
-@media (min-width: 1536px) {
-  .unicorn_block_left {
-    min-width: 575px;
-    width: 575px;
-  }
-  .unicorn_block_left p {
-    font-size: 20px;
-    line-height: 36px;
-  }
-  .unicorn_block_right {
-    margin-left: 70px;
   }
 }
 @media (min-width: 1680px) {
@@ -4477,11 +4470,15 @@ input:focus {
 .single_news_block_sidebar_item_img {
   display: none;
 }
+.single_news_block_sidebar_item_tabs {
+  display: none;
+}
 .single_news_block_sidebar_item_wrap {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 24px;
   position: relative;
+  display: block;
 }
 .single_news_block_sidebar_item_wrap::after {
   content: "";
@@ -4625,6 +4622,7 @@ input:focus {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: calc(50% - 10px);
+    position: relative;
   }
   .single_news_block_sidebar_item_img {
     display: block;
@@ -4635,15 +4633,20 @@ input:focus {
     padding: 20px 10px;
     border-radius: 20px 20px 20px 0px;
   }
-  .single_news_block_sidebar_item_img_tabs {
+  .single_news_block_sidebar_item_tabs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    left: 10px;
+    top: 20px;
   }
-  .single_news_block_sidebar_item_img_tabs a {
+  .single_news_block_sidebar_item_tabs a {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0px 15px;
@@ -4772,6 +4775,16 @@ input:focus {
   .single_news_block_sidebar_item_wrap h3 {
     font-size: 14px;
     line-height: 20px;
+  }
+  .single_news_block_sidebar_item_img {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+  }
+  .single_news_block_sidebar_item:hover .single_news_block_sidebar_item_img {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -5913,7 +5926,7 @@ input:focus {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 300px;
+    width: 230px;
     margin: 0 auto;
   }
   .about_solution_block_btns a {
@@ -6379,10 +6392,10 @@ input:focus {
   content: "";
   position: absolute;
   left: 15px;
-  height: calc(100% + 18px);
+  height: 0px;
   width: 2px;
   top: 28px;
-  background: #353535;
+  background-color: #2E00E4;
 }
 .stages_block_hero_item_circle {
   min-width: 30px;
@@ -6434,9 +6447,9 @@ input:focus {
   display: block;
 }
 .stages_block_hero_item.active::after {
-  background-color: #2E00E4;
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  height: calc(100% + 18px);
+  -webkit-transition: height 0.3s linear;
+  transition: height 0.3s linear;
 }
 @media (min-width: 768px) {
   .stages_block_hero_item {
@@ -6487,7 +6500,6 @@ input:focus {
   .stages_block_hero_item::after {
     left: 20px;
     top: 70px;
-    height: calc(100% - 15px);
   }
   .stages_block_hero_item_circle {
     min-width: 40px;
@@ -6524,6 +6536,11 @@ input:focus {
   }
   .stages_block_hero_item:nth-child(even) .stages_block_hero_item_text {
     margin-right: 50px;
+  }
+  .stages_block_hero_item.active::after {
+    height: calc(100% - 15px);
+    -webkit-transition: height 0.3s linear;
+    transition: height 0.3s linear;
   }
 }
 
@@ -7097,8 +7114,8 @@ input:focus {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -7108,14 +7125,14 @@ input:focus {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 @-webkit-keyframes marqueeRight {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -7124,8 +7141,8 @@ input:focus {
 }
 @keyframes marqueeRight {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -7189,6 +7206,14 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
 }
+.hero_text_block_item.toleft {
+  -webkit-animation: marqueeLeft 40s linear infinite;
+          animation: marqueeLeft 40s linear infinite;
+}
+.hero_text_block_item.toright {
+  -webkit-animation: marqueeRight 40s linear infinite;
+          animation: marqueeRight 40s linear infinite;
+}
 .hero_text_block_item_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7212,14 +7237,6 @@ input:focus {
 }
 .hero_text_block_item:last-child p {
   color: rgba(255, 255, 255, 0.1);
-}
-.hero_text_block_item.toleft {
-  -webkit-animation: marqueeLeft 10s linear infinite;
-          animation: marqueeLeft 10s linear infinite;
-}
-.hero_text_block_item.toright {
-  -webkit-animation: marqueeRight 10s linear infinite;
-          animation: marqueeRight 10s linear infinite;
 }
 .hero_text.active .hero_text_start {
   opacity: 0;
@@ -7602,7 +7619,7 @@ input:focus {
   .footer_desktop_content_left::after {
     content: "";
     position: absolute;
-    right: -105px;
+    right: -85px;
     top: 30px;
     height: 204px;
     width: 1px;
@@ -7764,7 +7781,7 @@ input:focus {
     margin-left: 30px;
   }
   .footer_desktop_content_right {
-    margin-left: 210px;
+    margin-left: 170px;
     margin-top: 58px;
     width: 100%;
   }
@@ -7816,8 +7833,8 @@ input:focus {
   .footer_desktop_content_right_mid_tel span {
     font-family: "RF Tone";
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 13px;
+    line-height: 16px;
     color: #FFFFFF;
   }
   .footer_desktop_content_right_mid_mail {
@@ -7851,8 +7868,8 @@ input:focus {
   .footer_desktop_content_right_mid_mail p {
     font-family: "RF Tone";
     font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 19px;
     color: #FFFFFF;
     margin-left: 10px;
   }
@@ -7920,8 +7937,8 @@ input:focus {
   .footer_desktop_content_right_nav li a {
     font-family: "RF Tone";
     font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 19px;
     color: #CBCCD0;
   }
   .footer_desktop_content_right_nav li:last-child {

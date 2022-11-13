@@ -28,6 +28,26 @@ $(document).ready(function () {
       $(".modal_contacts").addClass("active");
     });
 
+
+    $(".header_block_nav_company").on({
+      mouseenter:function () {
+        $(".header_block_nav_company_drop").addClass("active");
+      },
+      mouseleave:function () {
+        $(".header_block_nav_company_drop").removeClass("active");
+      }
+    });
+
+    $(".header_block_nav_company_drop").on({
+      mouseenter:function () {
+        $(this).addClass("active");
+      },
+      mouseleave:function () {
+        $(this).removeClass("active");
+      }
+    });
+
+
     $(".unicorn_block_left_btns_qr").click(function() {
       if ($(window).width() < 1200) {
         $(".modal_back").addClass("active");

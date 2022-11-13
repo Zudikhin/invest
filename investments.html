@@ -443,7 +443,7 @@
             <p>Стать частью истории</p>
           </div>
           <div class="hero_text_block_item_wrap">
-            <p>Инвестиции в будующее</p>
+            <p class="white_one">Инвестиции в будующее</p>
             <p>Статус</p>
             <p>Вклад в технологии</p>
             <p>Стать частью истории</p>
@@ -515,25 +515,25 @@
             <p>Повышение финансовой грамотности</p>
             <p>Влиятельные связи </p>
             <p>Риски </p>
-            <p>Принесет ли данное вложение прибыль?</p>
+            <p>Основная причина - высокая доходность</p>
           </div>
           <div class="hero_text_block_item_wrap">
             <p>Повышение финансовой грамотности</p>
             <p>Влиятельные связи </p>
             <p>Риски </p>
-            <p>Принесет ли данное вложение прибыль?</p>
+            <p>Основная причина - высокая доходность</p>
           </div>
           <div class="hero_text_block_item_wrap">
             <p>Повышение финансовой грамотности</p>
             <p>Влиятельные связи </p>
             <p>Риски </p>
-            <p>Принесет ли данное вложение прибыль?</p>
+            <p>Основная причина - высокая доходность</p>
           </div>
           <div class="hero_text_block_item_wrap">
             <p>Повышение финансовой грамотности</p>
             <p>Влиятельные связи </p>
             <p>Риски </p>
-            <p>Принесет ли данное вложение прибыль?</p>
+            <p>Основная причина - высокая доходность</p>
           </div>
         </div>
 
@@ -1273,7 +1273,7 @@
         const elems = () => {
             for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
                 let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
-                let top = viewportOffset.top + 500;  //  get the offset top
+                let top = viewportOffset.top + 150;  //  get the offset top
                 if(top < windowHeight) {  //  if the top offset is less than the window height
                     allElements[i].classList.add('active');  //  add the class
                 } else{
@@ -1293,6 +1293,15 @@
       $('#invest').niceSelect();
       $('#individual').niceSelect();
       $('#purchase').niceSelect();
+    </script>
+
+    <script>
+
+      $(".hero_text_block_item").each(function() {
+        var widthElem = $(this)[0].scrollWidth;
+        $(this).width(widthElem);
+      });
+
     </script>
 
     <script>
